@@ -194,7 +194,7 @@ const Navbar = ({
         <div className="total font-bold my-3">Subtotal: ₹{subTotal}</div>
 
         <div className="flex ">
-          <Link href={"/checkout"}>
+          <Link passHref={true} href={"/checkout"}>
             <button className="flex  mx-2 text-white bg-pink-500 border-0 py-1 px-2 focus:outline-none hover:bg-pink-600 rounded text-base">
               <BsFillBagCheckFill className="m-1" /> Checkout
             </button>

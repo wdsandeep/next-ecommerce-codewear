@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 
 import Link from "next/link";
-const signup = () => {
+const Signup = () => {
   const router = useRouter();
 
   const [name, setName] = useState("");
@@ -181,4 +181,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
