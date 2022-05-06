@@ -1,3 +1,39 @@
+# NEXT MONGODB - E-Commerce
+
+Live URL - [Click Here](https://zesty-sprite-1a7e32.netlify.app/)
+
+## Hosted/Deployed on
+
+Netlify
+
+## DATABASE
+
+MONGODB with Mongoose
+
+## Design & CSS
+
+TailwindCSS and Tailblocks
+
+## Packages / Library used in this Project
+
+Dependencies -
+
+- crypto-js - Encryption
+
+- jsonwebtoken - User Authentication
+
+- react-icons - Icons used in Project
+
+- react-toastify - To show status messages on website
+
+- react-top-loading-bar - To show loading bar on top of the page.
+
+---
+
+---
+
+## About Project
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
