@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Order from "../models/Order";
 import mongoose from "mongoose";
@@ -8,6 +9,10 @@ const MyOrder = ({ order }) => {
   const products = order.products;
   return (
     <div>
+      <Head>
+        <title>Order - Codeswear</title>
+      </Head>
+
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">

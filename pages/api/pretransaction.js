@@ -1,6 +1,7 @@
 import Order from "../../models/Order";
 import Product from "../../models/Product";
 import connectDB from "../../middleware/mongoose";
+import pincodes from "../../pincodes.json";
 
 const https = require("https");
 /*
@@ -11,8 +12,15 @@ const PaytmChecksum = require("paytmchecksum");
 
 const handler = async (req, res) => {
   if (req.method == "POST") {
-    //res.status(200).json({ status: "this is post request" });
-    //exit;
+    //check if the pincode is serviceable
+    if (!Object.keys(pincodes).includes(req.body.pincode)) {
+      res.status(200).json({
+        success: false,
+        error: "The pincode you have entered is not serviceable!",
+        cartClear: false,
+      });
+      return;
+    }
 
     // Check if the cart is tampered with -- [Pending]
     let product,
@@ -27,6 +35,7 @@ const handler = async (req, res) => {
         res.status(200).json({
           success: false,
           error: "Some itme in your cart went out of stock. Please try again!",
+          cartClear: true,
         });
         return;
       }
@@ -35,6 +44,7 @@ const handler = async (req, res) => {
           success: false,
           error:
             "The price of some items in your cart have changed. Please try again.",
+          cartClear: true,
         });
         return;
       }

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-
+import Head from "next/head";
 const Myaccount = () => {
   const router = useRouter();
   useEffect(() => {
@@ -9,7 +9,15 @@ const Myaccount = () => {
     }
   }, [router.query]);
 
-  return <div className="min-h-screen">myaccount</div>;
+  return (
+    <div className="min-h-screen">
+      {" "}
+      <Head>
+        <title>My Account - Codeswear</title>
+      </Head>
+      myaccount
+    </div>
+  );
 };
 
 export default Myaccount;

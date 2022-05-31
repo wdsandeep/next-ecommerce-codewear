@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -70,6 +71,10 @@ const Login = () => {
   };
   return (
     <div>
+      <Head>
+        <title>Login - Codeswear</title>
+      </Head>
+
       <ToastContainer
         position="bottom-left"
         autoClose={5000}

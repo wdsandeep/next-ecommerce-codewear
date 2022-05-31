@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 import Product from "../models/Product";
 
@@ -8,6 +9,10 @@ const Tshirts = ({ products }) => {
   // console.log(products);
   return (
     <div>
+      <Head>
+        <title>Tshirts - Codeswear</title>
+      </Head>
+
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4 justify-center ">

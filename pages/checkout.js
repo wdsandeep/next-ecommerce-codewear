@@ -116,7 +116,9 @@ const Checkout = ({ cart, clearCart, addToCart, removeFromCart, subTotal }) => {
     } else {
       // console.log(txnRes.error);/
       localStorage.removeItem("cart");
-      clearCart();
+      if (txnRes.cartClear) {
+        clearCart();
+      }
       toast.error(txnRes.error, {
         position: "top-right",
         autoClose: 5000,
@@ -144,6 +146,7 @@ const Checkout = ({ cart, clearCart, addToCart, removeFromCart, subTotal }) => {
       {/* Same as */}
       <ToastContainer />
       <Head>
+        <title>Checkout</title>
         <meta
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
